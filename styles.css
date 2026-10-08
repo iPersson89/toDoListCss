@@ -4,14 +4,16 @@
     justify-content: center;
     align-items: center;
     
-    width: 300px;
+    width: 400px; 
     max-width: 90%;
     height: auto;
-    
+    min-height: 300x;
+
     padding: 25px;
     margin: auto;
     border: 3px solid transparent;
     flex-direction: column;
+    box-shadow: 0px 5px 50px #b6b5b5;
 }
 
 .box-content {
@@ -20,6 +22,7 @@
     align-items: center;
     flex-direction: column;
     opacity: 0;
+    animation-timing-function: ease-in;
 }
 
 @keyframes box {
@@ -38,7 +41,7 @@
 .box {
     animation-name: box;
     animation-duration: 0.8s;
-    animation-timing-function: ease-in;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.65);
     animation-fill-mode: forwards;
 }
 
@@ -46,7 +49,6 @@
   0% {
     opacity: 0;
   }
- 
   100% {
     opacity: 1;    
   }
@@ -56,7 +58,7 @@
 .box-content {
     animation-name: box-content;
     animation-duration: 0.7s;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.65);
     animation-delay: 0.9s;
     animation-fill-mode: forwards;
 }
@@ -113,16 +115,14 @@ li {
   animation-name: li;
   animation-duration: 0.8s;
   animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-
-  
+  animation-fill-mode: forwards; 
 }
 
 li.completed .todoText {
   text-decoration: line-through;
   transition-delay: 0.5s;
-  transition-timing-function: ease-in;
-  opacity: 0.6; 
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.5; 
 }
 
 @keyframes li {
