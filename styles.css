@@ -1,0 +1,187 @@
+.box {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    
+    padding: 25px;
+    margin: auto;
+    border: 3px solid transparent;
+    flex-direction: column;
+}
+
+.box-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+@keyframes box {
+  0% {
+    transform: translateY(-200px);
+  }
+  80% {
+    transform:translateY(20px);
+  }
+  100% {
+    transform: translateY(0);    
+  }
+}
+
+
+.box {
+    animation-name: box;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes box-content {
+  0% {
+    opacity: 0;
+  }
+ 
+  100% {
+    opacity: 1;    
+  }
+}
+
+
+.box-content {
+    animation-name: box-content;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+
+.input {
+display: flex;
+gap: 8px;
+align-items: center;
+}
+
+.trashBtn {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.trashBtn:hover {
+  opacity: 1;
+}
+
+
+h1 {
+ font-family:"Times New Roman", Times, serif;
+ font-size: 42px;
+ margin-top: 0px;
+ margin-bottom: 4px;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+html {
+   background-image: linear-gradient(to bottom, #FEC3C2, #FE8A89);
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-height: 100vh;
+}
+
+
+li {
+  font-family: "Arial", Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  animation-name: li;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+  
+}
+
+li.completed .todoText {
+  text-decoration: line-through;
+  transition-delay: 0.5s;
+  transition-timing-function: ease-in;
+  opacity: 0.6; 
+}
+
+@keyframes li {
+  0% {
+    margin-top: -100px;
+  }
+  80% {
+    margin-top: 20px; 
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.completedList {
+    padding: 0;
+    margin: 0;
+    color:rgb(90, 86, 86);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#toDoList {
+    padding: 0;
+    margin: 0;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.felmeddelande {
+    font-style: italic;
+    font-family: "Arial", Arial, Helvetica, sans-serif;
+    color: red; 
+}
+
+.felmeddelande {
+  animation-name: felmeddelande;
+  animation-duration: 0.6s; 
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 4;
+  animation-fill-mode: forwards;
+}
+
+@keyframes felmeddelande {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
