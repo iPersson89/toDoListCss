@@ -12,6 +12,10 @@ let completedToDo = 0;
 addBtn.addEventListener("click", function(){
     if (inputList.value === "") {
         meddelande.textContent = "Input must not be empty";
+
+        //Startar om animationen 
+        meddelande.classList.remove("felmeddelande");
+        setTimeout(() => meddelande.classList.add("felmeddelande"), 0);
         return;
     }
 
